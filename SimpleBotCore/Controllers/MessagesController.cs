@@ -1,18 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Bot.Connector;
 using Microsoft.Bot.Schema;
 using SimpleBotCore.Logic;
+using SimpleBotCoreDomain.Entities;
 
 namespace SimpleBotCore.Controllers
 {
     [Route("api/[controller]")]
     public class MessagesController : Controller
     {
-        SimpleBotUser _bot = new SimpleBotUser();
+        protected readonly SimpleBotUser _bot;
 
         public MessagesController(SimpleBotUser bot)
         {

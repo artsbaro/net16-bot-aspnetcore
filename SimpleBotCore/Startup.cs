@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using SimpleBotCore.Logic;
+using SimpleBotCoreMongoDB;
 
 namespace SimpleBotCore
 {
@@ -25,6 +26,8 @@ namespace SimpleBotCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<SimpleBotUser>();
+            services.AddSingleton<MongoDBData>();
+
             services.AddMvc();
         }
 

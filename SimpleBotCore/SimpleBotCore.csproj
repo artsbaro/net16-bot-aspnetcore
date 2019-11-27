@@ -5,17 +5,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Logic\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
     <PackageReference Include="Microsoft.Bot.Connector" Version="4.4.4" />
+    <PackageReference Include="MongoDB.Bson" Version="2.9.3" />
+    <PackageReference Include="MongoDB.Driver" Version="2.9.3" />
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.9.3" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleBotCoreMongoDB\SimpleBotCoreMongoDB.csproj" />
   </ItemGroup>
 
 </Project>
